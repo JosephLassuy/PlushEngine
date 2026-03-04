@@ -1,0 +1,10 @@
+build/
+build-web/
+.cache/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+.vscode/
+.idea/

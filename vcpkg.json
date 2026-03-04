@@ -1,0 +1,6 @@
+{
+  "name": "plush-engine",
+  "version-semver": "0.1.0",
+  "description": "PlushEngine C++",
+  "dependencies": []
+}
