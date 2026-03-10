@@ -12,14 +12,25 @@ struct App {
   std::unordered_set<std::type_index> installed_plugins;
 
   template <typename T>
-  void addPlugin(T& plugin) {
+  void addPlugin() {
       auto tid = std::type_index(typeid(T));
       if (installed_plugins.contains(tid)) {
           return;  // already added, skip
       }
+      T plugin;
       plugin.build(*this);
       installed_plugins.insert(tid);
   }
+
+  // template <typename T>
+  // void addPlugin(T& plugin) {
+  //     auto tid = std::type_index(typeid(T));
+  //     if (installed_plugins.contains(tid)) {
+  //         return;  // already added, skip
+  //     }
+  //     plugin.build(*this);
+  //     installed_plugins.insert(tid);
+  // }
   void addSystem(ScheduleLabel label, void (*run)(App&)) {
     schedules.addSystem(label, run);
   }

@@ -2,5 +2,8 @@
   "name": "plush-engine",
   "version-semver": "0.1.0",
   "description": "PlushEngine C++",
-  "dependencies": []
+  "dependencies": [
+    "sdl3",
+    "vulkan"
+  ]
 }
